@@ -1,0 +1,70 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "#sky5": {
+            "dynamicWrapping": true,
+            "scaleInEditor": 1
+        },
+        "assets/tiles/level1.tmx": {
+            "expandedObjectLayers": [
+                2,
+                3
+            ],
+            "scale": 0.65,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 958.4615384615383,
+                "y": 640.7692307692307
+            }
+        },
+        "assets/tiles/level1.tmx#punky_64": {
+            "scaleInDock": 1
+        },
+        "assets/tiles/level1.tmx#sky5": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "assets/tiles/level2.tmx": {
+            "expandedObjectLayers": [
+                3,
+                5
+            ],
+            "scale": 0.6541145833333334,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 960.0764392069432,
+                "y": 641.3249462536825
+            }
+        },
+        "assets/tiles/level2.tmx#punky_64": {
+            "scaleInDock": 1
+        },
+        "assets/tiles/spritesheet.tsx": {
+            "dynamicWrapping": false
+        }
+    },
+    "last.imagePath": "/Users/michaelmay/AndroidStudioProjects/space_punks/assets/images",
+    "map.lastUsedFormat": "tmx",
+    "map.layerDataFormat": null,
+    "map.tileHeight": 64,
+    "map.tileWidth": 64,
+    "openFiles": [
+    ],
+    "project": "space_punks.tiled-project",
+    "property.type": "object",
+    "recentFiles": [
+    ],
+    "tileset.embedInMap": true,
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 64,
+        "width": 64
+    },
+    "tileset.type": 0
+}
