@@ -8,9 +8,11 @@ import 'package:flame/extensions.dart';
 
 import 'package:flame/input.dart';
 import 'package:flutter/services.dart';
+import 'package:space_punks/actors/moving_platform.dart';
 import 'package:space_punks/game/game_main.dart';
 
 import 'package:space_punks/actors/platform.dart';
+import 'package:space_punks/level/level.dart';
 
 
 enum PlayerState {
@@ -32,6 +34,7 @@ class Player extends SpriteAnimationGroupComponent with CollisionCallbacks, Keyb
   late Vector2 _maxClamp;
   late Vector2 _myPosition;
   late Vector2 _mySize;
+  late String _levelName;
 
   static final _animationMap = {
     PlayerState.run: SpriteAnimationData.sequenced(amount: 3, stepTime: 0.1, textureSize: Vector2(64,64)),
@@ -63,6 +66,7 @@ class Player extends SpriteAnimationGroupComponent with CollisionCallbacks, Keyb
 
   @override
   Future<void>? onLoad() {
+    _levelName = gameRef.currentLevel!.levelName;
     //debugMode = true;
     position = _myPosition;
     anchor = Anchor.center;
@@ -98,9 +102,12 @@ class Player extends SpriteAnimationGroupComponent with CollisionCallbacks, Keyb
 
     //Keeps pLayer from sinking into floor on spawn
     //Map Y = 1280  1.5 * Player height (96px)
-    if(position.y > 1184) {
-      position.y = 1184;
+    if(_levelName != 'rocket_level.tmx') {
+      if(position.y > 1184) {
+        position.y = 1184;
+      }
     }
+
 
 
     if (_jumpInput) {
@@ -159,10 +166,10 @@ class Player extends SpriteAnimationGroupComponent with CollisionCallbacks, Keyb
       }
     }
 
-    /*if(other is MovingPlatform) {
+    if(other is MovingPlatform) {
       double centerPlatformWidth = other.width / 2;
       position.x = other.position.x + centerPlatformWidth;
-    }*/
+    }
     super.onCollision(intersectionPoints, other);
   }
 

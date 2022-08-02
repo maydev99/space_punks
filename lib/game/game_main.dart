@@ -6,7 +6,7 @@ import 'package:space_punks/level/level.dart';
 import 'package:space_punks/mechanics/tap_component.dart';
 
 class GameMain extends FlameGame with HasCollisionDetection, HasTappableComponents, HasTappablesBridge {
-  Level? _currentLevel;
+  Level? currentLevel;
   late Image spritesheet;
   late Image punky;
   late TapComponent tapComponent;
@@ -21,14 +21,14 @@ class GameMain extends FlameGame with HasCollisionDetection, HasTappableComponen
     screenY = size.y;
 
     camera.viewport = FixedResolutionViewport(Vector2(900,450));
-    loadLevel('level1.tmx');
+    loadLevel('rocket_level.tmx');
 
     return super.onLoad();
   }
   void loadLevel(String levelName) {
-    _currentLevel?.removeFromParent();
-    _currentLevel = Level(levelName);
-    add(_currentLevel!);
+    currentLevel?.removeFromParent();
+    currentLevel = Level(levelName);
+    add(currentLevel!);
     tapComponent = TapComponent(size.x, size.y, screenX, screenY);
     add(tapComponent);
   }

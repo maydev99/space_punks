@@ -4,8 +4,10 @@ import 'package:flame_tiled/flame_tiled.dart';
 import 'package:space_punks/actors/door.dart';
 import 'package:space_punks/actors/enemy.dart';
 import 'package:space_punks/actors/key.dart';
+import 'package:space_punks/actors/moving_platform.dart';
 import 'package:space_punks/actors/platform.dart';
 import 'package:space_punks/actors/player.dart';
+import 'package:space_punks/actors/teleporter.dart';
 import 'package:tiled/tiled.dart';
 
 
@@ -96,16 +98,16 @@ class Level extends Component with HasGameRef<GameMain> {
           add(door);
           break;
 
-      /* case 'Teleporter':
+       case 'Teleporter':
           final targetObjectId = int.parse(spawnPoint.properties.first.value);
-          final teleporter = Teleporter(gameRef.teleporterImage,
+          final teleporter = Teleporter(gameRef.spritesheet,
               position: position, size: size, onPlayerEnter: () {
                 final target = spawnPointsLayer.objects
                     .firstWhere((object) => object.id == targetObjectId);
                 player.teleportToPosition(Vector2(target.x, target.y));
               });
           add(teleporter);
-          break;*/
+          break;
 
         case 'Key':
           final key = Key(
@@ -129,16 +131,16 @@ class Level extends Component with HasGameRef<GameMain> {
 
 
 
-      /* case 'MovingPlatform':
+       case 'MovingPlatform':
           final targetObjectId = int.parse(spawnPoint.properties.first.value);
           final target = spawnPointsLayer.objects
               .firstWhere((object) => object.id == targetObjectId);
-          final movingPlatform = MovingPlatform(gameRef.spriteSheet,
+          final movingPlatform = MovingPlatform(gameRef.spritesheet,
               position: position,
               targetPosition: Vector2(target.x, target.y),
               size: size);
           add(movingPlatform);
-          break;*/
+          break;
       }
     }
   }

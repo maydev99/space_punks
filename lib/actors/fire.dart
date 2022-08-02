@@ -8,11 +8,11 @@ import '../game/game_main.dart';
 
 
 
-class Enemy extends SpriteComponent
+class Fire extends SpriteComponent
     with CollisionCallbacks, HasGameRef<GameMain> {
 
   static final Vector2 _up = Vector2(0, -1);
-  Enemy(
+  Fire(
       Image image, {
         Vector2? srcPosition,
         Vector2? srcSize,
