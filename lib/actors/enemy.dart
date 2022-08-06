@@ -70,16 +70,18 @@ class Enemy extends SpriteComponent
             LinearEffectController(0.2),
             onComplete: () => removeFromParent(),
           ),
+
         );
-        //gameRef.playerData.score.value += 20;
-        //gameRef.playerData.bonusLifePointCount.value += 20;
+
+        print('Squash');
+        gameRef.playerData.score.value += 20;
+        gameRef.playerData.bonusLifePointCount.value += 20;
         other.jump = true;
       } else {
         other.hit();
-        //if (gameRef.playerData.health.value > 0) {
-        // gameRef.playerData.health.value -= 1;
-
-        //}
+        if (gameRef.playerData.health.value > 0) {
+         gameRef.playerData.health.value -= 1;
+        }
       }
 
 

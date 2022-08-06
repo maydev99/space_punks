@@ -42,13 +42,14 @@ class Door extends SpriteComponent with CollisionCallbacks, HasGameRef<GameMain>
   void onCollisionStart(
       Set<Vector2> intersectionPoints, PositionComponent other) {
     if (other is Player) {
-      print('Door');
-
-      //other.removeFromParent();
-      onPlayerEnter?.call();
-
-
-
+      if(gameRef.playerData.key.value) {
+        gameRef.makeAToast('Level Complete');
+        other.removeFromParent();
+        onPlayerEnter?.call();
+        gameRef.playerData.key.value = false;
+      } else {
+        gameRef.makeAToast('Locked');
+      }
 
     }
     super.onCollisionStart(intersectionPoints, other);

@@ -3,14 +3,14 @@ import 'package:flame/extensions.dart';
 import 'package:flame_tiled/flame_tiled.dart';
 import 'package:space_punks/actors/door.dart';
 import 'package:space_punks/actors/enemy.dart';
+import 'package:space_punks/actors/fire.dart';
 import 'package:space_punks/actors/key.dart';
 import 'package:space_punks/actors/moving_platform.dart';
 import 'package:space_punks/actors/platform.dart';
 import 'package:space_punks/actors/player.dart';
+import 'package:space_punks/actors/star.dart';
 import 'package:space_punks/actors/teleporter.dart';
 import 'package:tiled/tiled.dart';
-
-
 import '../actors/background.dart';
 import '../game/game_main.dart';
 
@@ -30,11 +30,21 @@ class Level extends Component with HasGameRef<GameMain> {
     final level = await TiledComponent.load(levelName, Vector2.all(64));
     //backgroundComponent = BackgroundComponent();
 
-    levelBounds = Rect.fromLTWH(
-        0,
-        0,
-        (level.tileMap.map.width * level.tileMap.map.tileWidth).toDouble(),
-        (level.tileMap.map.height * level.tileMap.map.tileHeight).toDouble());
+    if(levelName == 'rocket_level.tmx') {
+      levelBounds = Rect.fromLTWH(
+          0,
+          0,
+          ((level.tileMap.map.width * level.tileMap.map.tileWidth)+256).toDouble(),
+          (level.tileMap.map.height * level.tileMap.map.tileHeight).toDouble());
+    } else {
+      levelBounds = Rect.fromLTWH(
+          0,
+          0,
+          ((level.tileMap.map.width * level.tileMap.map.tileWidth)).toDouble(),
+          (level.tileMap.map.height * level.tileMap.map.tileHeight).toDouble());
+    }
+
+
 
     await setBackground(level.tileMap);
     await add(level);
@@ -47,16 +57,15 @@ class Level extends Component with HasGameRef<GameMain> {
     var bkgLayer = tileMap.getLayer<ImageLayer>('BackgroundLayer');
     var myImagePath = bkgLayer!.image.source;
     Image myImage = await gameRef.images.load(myImagePath!);
+    //Vector2 myImageSize = Vector2(myImage.size.x, myImage.size.y);
     print('Image Source: $myImage');
 
-
     final bkg =
-    Background(myImage, position: Vector2(0, 0), size: Vector2(1920, 1280));
+        Background(myImage, position: Vector2(0, 0), size: Vector2(myImage.size.x, myImage.size.y));
     await add(bkg);
   }
 
   spawnActors(RenderableTiledMap tileMap) async {
-
     final platformsLayer = tileMap.getLayer<ObjectGroup>('PlatformsLayer');
 
     for (final platformObject in platformsLayer!.objects) {
@@ -72,9 +81,8 @@ class Level extends Component with HasGameRef<GameMain> {
       final position = Vector2(spawnPoint.x, spawnPoint.y - spawnPoint.height);
       final size = Vector2(spawnPoint.width, spawnPoint.height);
       switch (spawnPoint.name) {
-
         case 'Player':
-          player = Player(gameRef.punky,
+          player = Player(gameRef.bob,
               anchor: Anchor.center,
               levelBounds: levelBounds,
               position: Vector2(spawnPoint.x, spawnPoint.y),
@@ -83,29 +91,29 @@ class Level extends Component with HasGameRef<GameMain> {
           await add(player);
           break;
 
-      /* case 'Star':
+         case 'Star':
           final star =
-          Star(gameRef.spriteSheet, position: position, size: size);
+          Star(gameRef.moreTile, position: position, size: size);
           add(star);
-          break;*/
+          break;
 
         case 'Door':
           final door = Door(gameRef.spritesheet, position: position, size: size,
               onPlayerEnter: () {
-                gameRef.loadLevel(spawnPoint.properties.first.value);
-              });
+            gameRef.loadLevel(spawnPoint.properties.first.value);
+          });
 
           add(door);
           break;
 
-       case 'Teleporter':
+        case 'Teleporter':
           final targetObjectId = int.parse(spawnPoint.properties.first.value);
           final teleporter = Teleporter(gameRef.spritesheet,
               position: position, size: size, onPlayerEnter: () {
-                final target = spawnPointsLayer.objects
-                    .firstWhere((object) => object.id == targetObjectId);
-                player.teleportToPosition(Vector2(target.x, target.y));
-              });
+            final target = spawnPointsLayer.objects
+                .firstWhere((object) => object.id == targetObjectId);
+            player.teleportToPosition(Vector2(target.x, target.y));
+          });
           add(teleporter);
           break;
 
@@ -116,6 +124,15 @@ class Level extends Component with HasGameRef<GameMain> {
             size: size,
           );
           add(key);
+          break;
+
+        case 'Fire':
+          final fire = Fire(
+            gameRef.fireSpriteSheet,
+            position: position,
+            size: size
+          );
+          add(fire);
           break;
 
         case 'Enemy':
@@ -129,9 +146,7 @@ class Level extends Component with HasGameRef<GameMain> {
           add(enemy);
           break;
 
-
-
-       case 'MovingPlatform':
+        case 'MovingPlatform':
           final targetObjectId = int.parse(spawnPoint.properties.first.value);
           final target = spawnPointsLayer.objects
               .firstWhere((object) => object.id == targetObjectId);

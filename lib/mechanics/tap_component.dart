@@ -32,12 +32,10 @@ class TapComponent extends PositionComponent
     double centerScreenXStart = width / 3;
 
     if (tapX < centerScreenXStart) {
-
       _player?.hAxisInput = -2;
     }
 
     if (tapX >= centerScreenXStart && tapX < width - centerScreenXStart) {
-
       _player?.hAxisInput = 2;
     }
 
@@ -55,7 +53,6 @@ class TapComponent extends PositionComponent
     double centerScreenXStart = width / 3;
 
     if (tapX < centerScreenXStart) {
-
       _player?.hAxisInput = -0;
 
     }

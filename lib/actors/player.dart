@@ -8,6 +8,8 @@ import 'package:flame/extensions.dart';
 
 import 'package:flame/input.dart';
 import 'package:flutter/services.dart';
+import 'package:space_punks/actors/enemy.dart';
+import 'package:space_punks/actors/fire.dart';
 import 'package:space_punks/actors/moving_platform.dart';
 import 'package:space_punks/game/game_main.dart';
 
@@ -18,6 +20,9 @@ import 'package:space_punks/level/level.dart';
 enum PlayerState {
   run,
   stand,
+  jump,
+  idle,
+  smug,
 }
 
 
@@ -35,10 +40,17 @@ class Player extends SpriteAnimationGroupComponent with CollisionCallbacks, Keyb
   late Vector2 _myPosition;
   late Vector2 _mySize;
   late String _levelName;
+  final Timer _idleTimer = Timer(2);
+  bool isIdle = false;
+
+  static final Vector2  _down = Vector2(0, 1);
 
   static final _animationMap = {
-    PlayerState.run: SpriteAnimationData.sequenced(amount: 3, stepTime: 0.1, textureSize: Vector2(64,64)),
-    PlayerState.stand: SpriteAnimationData.sequenced(amount: 1, stepTime: 1, textureSize: Vector2(64,64))
+    PlayerState.run: SpriteAnimationData.sequenced(amount: 4, stepTime: 0.1, textureSize: Vector2(64,64)),
+    PlayerState.stand: SpriteAnimationData.sequenced(amount: 2, stepTime: 1, texturePosition: Vector2((4) * 64, 0), textureSize: Vector2(64,64)),
+    PlayerState.jump: SpriteAnimationData.sequenced(amount: 2, stepTime: 0.2, texturePosition: Vector2((10) * 64, 0),textureSize: Vector2(64,64)),
+   // PlayerState.idle: SpriteAnimationData.sequenced(amount: 2, stepTime: 0.8, texturePosition: Vector2((4) * 64, 0), textureSize: Vector2(64,64)),
+    PlayerState.smug: SpriteAnimationData.sequenced(amount: 4, stepTime: 0.5 , texturePosition: Vector2((6) * 64, 0), textureSize: Vector2(64,64), loop: false)
   };
 
 
@@ -81,11 +93,19 @@ class Player extends SpriteAnimationGroupComponent with CollisionCallbacks, Keyb
   void onMount() {
     gameRef.tapComponent.connectPLayer(this);
     current = PlayerState.stand;
+
+    _idleTimer.onTick = () {
+      print('Idle');
+     isIdle = true;
+    };
     super.onMount();
   }
 
   @override
   void update(double dt) {
+
+
+
     _velocity.x = _hAxisInput * _moveSpeed;
     _velocity.y += _gravity;
 
@@ -96,8 +116,12 @@ class Player extends SpriteAnimationGroupComponent with CollisionCallbacks, Keyb
       current = PlayerState.stand;
     }
 
+
+
+
     if(_velocity.y < _gravity) {
       _isOnGround = false;
+      current = PlayerState.jump;
     }
 
     //Keeps pLayer from sinking into floor on spawn
@@ -108,12 +132,15 @@ class Player extends SpriteAnimationGroupComponent with CollisionCallbacks, Keyb
       }
     }
 
-
-
     if (_jumpInput) {
+      current = PlayerState.jump;
       if (_isOnGround) {
         _velocity.y = -_jumpSpeed;
         _isOnGround = false;
+        current = PlayerState.run;
+
+      } else {
+
       }
 
       _jumpInput = false;
@@ -169,7 +196,22 @@ class Player extends SpriteAnimationGroupComponent with CollisionCallbacks, Keyb
     if(other is MovingPlatform) {
       double centerPlatformWidth = other.width / 2;
       position.x = other.position.x + centerPlatformWidth;
+
     }
+
+    if(other is Enemy) {
+      final enemyDir = (other.absoluteCenter - absoluteCenter).normalized();
+      if(enemyDir.dot(_down) > 0.45) {
+        current = PlayerState.smug;
+      }
+    }
+
+
+
+    if(other is Fire) {
+
+    }
+
     super.onCollision(intersectionPoints, other);
   }
 
@@ -177,6 +219,7 @@ class Player extends SpriteAnimationGroupComponent with CollisionCallbacks, Keyb
   void onCollisionEnd(PositionComponent other) {
     if(other is Platform) {
       _isOnGround = false;
+      current = PlayerState.jump;
     }
     super.onCollisionEnd(other);
   }
@@ -213,6 +256,10 @@ class Player extends SpriteAnimationGroupComponent with CollisionCallbacks, Keyb
   void teleportToPosition(Vector2 destination) {
     position = Vector2(destination.x, destination.y);
     _velocity.x = 0;
+  }
+
+  void squashEnemyAnim() {
+    current = PlayerState.smug;
   }
 
 }

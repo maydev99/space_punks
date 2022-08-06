@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="10" height="40" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="228">
+ <tileset firstgid="1" name="rocket_inside_tiles" tilewidth="64" tileheight="64" tilecount="4" columns="2">
+  <image source="../images/rocket_inside_tiles.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="5" source="spritesheet.tsx"/>
+ <tileset firstgid="17" name="lava_1" tilewidth="64" tileheight="64" tilecount="4" columns="4">
+  <image source="../images/lava_1.png" width="256" height="64"/>
+ </tileset>
+ <tileset firstgid="21" name="more_tile" tilewidth="64" tileheight="64" tilecount="2" columns="1">
+  <image source="../images/more_tile.png" width="64" height="128"/>
+ </tileset>
+ <imagelayer id="4" name="BackgroundLayer">
+  <image source="../images/clear_rocket_bkg.png" width="640" height="2560"/>
+ </imagelayer>
+ <layer id="1" name="Tile Layer 1" width="10" height="40">
+  <data encoding="base64">
+   AAAAAAAAAAAAAAAAAAAAAAMAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAwAAAAMAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAEAAAABAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAMAAAAAAAAABAAAYAMAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAABAAAAFQAAABUAAAABAAAAAgAAAAAAAAAAAAAAAAAAAAMAAAADAAAAFQAAABUAAAAVAAAAFQAAAAMAAAADAAAAAAAAAAAAAAACAAAAFQAAABUAAAADAAAAAwAAABUAAAAVAAAAAgAAAAAAAAADAAAAAwAAABUAAAADAAAAAwAAAAMAAAAVAAAAFQAAAAMAAAADAAAAAwAAAAEAAAAVAAAAFQAAAAMAAAADAAAAFQAAABUAAAABAAAAAwAAAAMAAAABAAAAFQAAABUAAAAVAAAAFQAAABUAAAAVAAAAAQAAAAMAAAADAAAAAQAAAAMAAAAVAAAAFQAAABUAAAAVAAAAAwAAAAEAAAADAAAAAwAAAAEAAAAVAAAAFQAAAAMAAAADAAAAFQAAAAMAAAABAAAAAwAAAAMAAAABAAAAFQAAABUAAAABAAAAAQAAABUAAAAVAAAAAQAAAAMAAAADAAAAAQAAABUAAAAVAAAAAQAAAAEAAAAVAAAAFQAAAAEAAAADAAAAAwAAAAEAAAAVAAAAAwAAAAMAAAADAAAAFQAAABUAAAABAAAAAwAAAAMAAAABAAAAFQAAABUAAAAVAAAAFQAAABUAAAAVAAAAAQAAAAMAAAADAAAAAwAAABUAAAAVAAAAFQAAABUAAAAVAAAAFQAAABUAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAAVAAAAAwAAAAMAAAAVAAAAFQAAABUAAAAVAAAAFQAAABUAAAAVAAAAFQAAAAMAAAADAAAAFQAAABUAAAAVAAAAFQAAABUAAAAVAAAAFQAAABUAAAADAAAAAwAAABUAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAAVAAAAFQAAABUAAAAVAAAAFQAAABUAAAAVAAAAFQAAAAMAAAADAAAAFQAAABUAAAAVAAAAFQAAABUAAAAVAAAAFQAAABUAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAAVAAAAAwAAAAMAAAAVAAAAFQAAABUAAAAVAAAAFQAAABUAAAAVAAAAFQAAAAMAAAAFAAAABQAAAAUAAAAFAAAAFQAAABUAAAAFAAAABQAAAAUAAAAFAAAABQAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAYAUAAGAAAAAAAAAAAAAAAAAAAAAABQAAAAUAAAAAAAAAAAAAAAUAAGAFAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAABgBQAAYAUAAAAFAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAYAUAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAGAFAABgAAAAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAAAAAAAFAABgBQAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAYAUAAGAAAAAAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAGAFAABgAAAAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAAAAAAAFAABgBQAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAYAUAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAABQAAAAUAAGAFAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAABgBQAAAAUAAAAFAAAABQAAAAUAAAAFAAAABQAAAAUAAAAFAAAABQAAAA==
+  </data>
+ </layer>
+ <objectgroup id="2" name="PlatformsLayer">
+  <object id="1" x="256" y="0" width="128" height="192"/>
+  <object id="2" x="192" y="128" width="256" height="64"/>
+  <object id="3" x="192" y="128" width="256" height="128"/>
+  <object id="4" x="128" y="256" width="128" height="128"/>
+  <object id="5" x="384" y="256" width="128" height="128"/>
+  <object id="6" x="64" y="384" width="128" height="64"/>
+  <object id="7" x="448" y="384" width="128" height="64"/>
+  <object id="8" x="64" y="448" width="64" height="64"/>
+  <object id="9" x="512" y="448" width="64" height="64"/>
+  <object id="10" x="0" y="512" width="128" height="704"/>
+  <object id="11" x="512" y="512" width="128" height="576"/>
+  <object id="12" x="576" y="1088" width="64" height="1472"/>
+  <object id="13" x="128" y="1152" width="384" height="64"/>
+  <object id="15" x="0" y="1216" width="64" height="1088"/>
+  <object id="16" x="0" y="2304" width="64" height="192"/>
+  <object id="17" x="0" y="2496" width="576" height="64"/>
+  <object id="18" x="256" y="448" width="128" height="192"/>
+  <object id="19" x="192" y="512" width="64" height="64"/>
+  <object id="20" x="128" y="704" width="64" height="64"/>
+  <object id="21" x="256" y="768" width="128" height="256"/>
+  <object id="22" x="192" y="960" width="64" height="64"/>
+  <object id="23" x="448" y="704" width="64" height="128"/>
+  <object id="24" x="128" y="1152" width="384" height="64"/>
+  <object id="25" x="128" y="1344" width="448" height="64"/>
+  <object id="26" x="64" y="1536" width="448" height="64"/>
+  <object id="27" x="0" y="1664" width="256" height="64"/>
+  <object id="28" x="384" y="1664" width="256" height="64"/>
+  <object id="29" x="320" y="1792" width="128" height="64"/>
+  <object id="30" x="64" y="1920" width="192" height="64"/>
+  <object id="31" x="320" y="2048" width="128" height="64"/>
+  <object id="32" x="192" y="2176" width="64" height="64"/>
+  <object id="33" x="320" y="2240" width="128" height="64"/>
+  <object id="34" x="448" y="2368" width="128" height="64"/>
+ </objectgroup>
+ <objectgroup id="3" name="SpawnLayer">
+  <object id="36" name="Player" x="320" y="384" width="64" height="64"/>
+  <object id="38" name="Door" gid="6" x="256" y="320" width="64" height="64">
+   <properties>
+    <property name="NextLevel" value="level1.tmx"/>
+   </properties>
+  </object>
+  <object id="39" name="Key" gid="9" x="512" y="2496" width="64" height="64"/>
+  <object id="40" name="Fire" gid="17" x="64" y="1792" width="64" height="64"/>
+  <object id="62" name="Fire" gid="17" x="320" y="1792" width="64" height="64"/>
+  <object id="66" name="Fire" gid="17" x="320" y="1920" width="64" height="64"/>
+  <object id="70" name="Fire" gid="17" x="320" y="1984" width="64" height="64"/>
+  <object id="128" name="Fire" gid="17" x="256" y="1984" width="64" height="64"/>
+  <object id="74" name="Fire" gid="17" x="320" y="2048" width="64" height="64"/>
+  <object id="78" name="Fire" gid="17" x="64" y="2048" width="64" height="64"/>
+  <object id="82" name="Fire" gid="17" x="64" y="2112" width="64" height="64"/>
+  <object id="86" name="Fire" gid="17" x="64" y="2176" width="64" height="64"/>
+  <object id="123" name="Fire" gid="17" x="64" y="2240" width="64" height="64"/>
+  <object id="90" name="Fire" gid="17" x="320" y="2176" width="64" height="64"/>
+  <object id="94" name="Fire" gid="17" x="320" y="2240" width="64" height="64"/>
+  <object id="125" name="Fire" gid="17" x="256" y="2240" width="64" height="64"/>
+  <object id="98" name="Fire" gid="17" x="64" y="2304" width="64" height="64"/>
+  <object id="102" name="Fire" gid="17" x="64" y="2368" width="64" height="64"/>
+  <object id="106" name="Fire" gid="17" x="64" y="2432" width="64" height="64"/>
+  <object id="110" name="Fire" gid="17" x="64" y="2496" width="64" height="64"/>
+  <object id="54" name="Fire" gid="17" x="64" y="1856" width="64" height="64"/>
+  <object id="58" name="Fire" gid="17" x="64" y="1920" width="64" height="64"/>
+  <object id="48" name="Fire" gid="17" x="128" y="1792" width="64" height="64"/>
+  <object id="61" name="Fire" gid="17" x="384" y="1792" width="64" height="64"/>
+  <object id="65" name="Fire" gid="17" x="384" y="1920" width="64" height="64"/>
+  <object id="69" name="Fire" gid="17" x="384" y="1984" width="64" height="64"/>
+  <object id="73" name="Fire" gid="17" x="384" y="2048" width="64" height="64"/>
+  <object id="77" name="Fire" gid="17" x="128" y="2048" width="64" height="64"/>
+  <object id="81" name="Fire" gid="17" x="128" y="2112" width="64" height="64"/>
+  <object id="85" name="Fire" gid="17" x="128" y="2176" width="64" height="64"/>
+  <object id="124" name="Fire" gid="17" x="128" y="2240" width="64" height="64"/>
+  <object id="89" name="Fire" gid="17" x="384" y="2176" width="64" height="64"/>
+  <object id="93" name="Fire" gid="17" x="384" y="2240" width="64" height="64"/>
+  <object id="97" name="Fire" gid="17" x="128" y="2304" width="64" height="64"/>
+  <object id="101" name="Fire" gid="17" x="128" y="2368" width="64" height="64"/>
+  <object id="105" name="Fire" gid="17" x="128" y="2432" width="64" height="64"/>
+  <object id="109" name="Fire" gid="17" x="128" y="2496" width="64" height="64"/>
+  <object id="53" name="Fire" gid="17" x="128" y="1856" width="64" height="64"/>
+  <object id="57" name="Fire" gid="17" x="128" y="1920" width="64" height="64"/>
+  <object id="60" name="Fire" gid="17" x="448" y="1792" width="64" height="64"/>
+  <object id="64" name="Fire" gid="17" x="448" y="1920" width="64" height="64"/>
+  <object id="129" name="Fire" gid="17" x="448" y="1856" width="64" height="64"/>
+  <object id="68" name="Fire" gid="17" x="448" y="1984" width="64" height="64"/>
+  <object id="72" name="Fire" gid="17" x="448" y="2048" width="64" height="64"/>
+  <object id="76" name="Fire" gid="17" x="192" y="2048" width="64" height="64"/>
+  <object id="80" name="Fire" gid="17" x="192" y="2112" width="64" height="64"/>
+  <object id="84" name="Fire" gid="17" x="192" y="2176" width="64" height="64"/>
+  <object id="88" name="Fire" gid="17" x="448" y="2176" width="64" height="64"/>
+  <object id="126" name="Fire" gid="17" x="448" y="2112" width="64" height="64"/>
+  <object id="92" name="Fire" gid="17" x="448" y="2240" width="64" height="64"/>
+  <object id="96" name="Fire" gid="17" x="192" y="2304" width="64" height="64"/>
+  <object id="100" name="Fire" gid="17" x="192" y="2368" width="64" height="64"/>
+  <object id="111" name="Fire" gid="17" x="512" y="2368" width="64" height="64"/>
+  <object id="112" name="Fire" gid="17" x="512" y="2304" width="64" height="64"/>
+  <object id="113" name="Fire" gid="17" x="448" y="2304" width="64" height="64"/>
+  <object id="114" name="Fire" gid="17" x="448" y="2368" width="64" height="64"/>
+  <object id="115" name="Fire" gid="17" x="384" y="2368" width="64" height="64"/>
+  <object id="116" name="Fire" gid="17" x="320" y="2368" width="64" height="64"/>
+  <object id="117" name="Fire" gid="17" x="320" y="2432" width="64" height="64"/>
+  <object id="118" name="Fire" gid="17" x="384" y="2432" width="64" height="64"/>
+  <object id="119" name="Fire" gid="17" x="320" y="2496" width="64" height="64"/>
+  <object id="120" name="Fire" gid="17" x="384" y="2496" width="64" height="64"/>
+  <object id="121" name="Fire" gid="17" x="448" y="2496" width="64" height="64"/>
+  <object id="122" name="Fire" gid="17" x="448" y="2496" width="64" height="64"/>
+  <object id="104" name="Fire" gid="17" x="192" y="2432" width="64" height="64"/>
+  <object id="108" name="Fire" gid="17" x="192" y="2496" width="64" height="64"/>
+  <object id="52" name="Fire" gid="17" x="192" y="1856" width="64" height="64"/>
+  <object id="56" name="Fire" gid="17" x="192" y="1920" width="64" height="64"/>
+  <object id="50" name="Fire" gid="17" x="256" y="1792" width="64" height="64"/>
+  <object id="131" name="Fire" gid="17" x="192" y="1792" width="64" height="64"/>
+  <object id="59" name="Fire" gid="17" x="512" y="1792" width="64" height="64"/>
+  <object id="63" name="Fire" gid="17" x="512" y="1920" width="64" height="64"/>
+  <object id="130" name="Fire" gid="17" x="512" y="1856" width="64" height="64"/>
+  <object id="67" name="Fire" gid="17" x="512" y="1984" width="64" height="64"/>
+  <object id="71" name="Fire" gid="17" x="512" y="2048" width="64" height="64"/>
+  <object id="75" name="Fire" gid="17" x="256" y="2048" width="64" height="64"/>
+  <object id="79" name="Fire" gid="17" x="256" y="2112" width="64" height="64"/>
+  <object id="83" name="Fire" gid="17" x="256" y="2176" width="64" height="64"/>
+  <object id="87" name="Fire" gid="17" x="512" y="2176" width="64" height="64"/>
+  <object id="127" name="Fire" gid="17" x="512" y="2112" width="64" height="64"/>
+  <object id="91" name="Fire" gid="17" x="512" y="2240" width="64" height="64"/>
+  <object id="95" name="Fire" gid="17" x="256" y="2304" width="64" height="64"/>
+  <object id="99" name="Fire" gid="17" x="256" y="2368" width="64" height="64"/>
+  <object id="103" name="Fire" gid="17" x="256" y="2432" width="64" height="64"/>
+  <object id="107" name="Fire" gid="17" x="256" y="2496" width="64" height="64"/>
+  <object id="51" name="Fire" gid="17" x="256" y="1856" width="64" height="64"/>
+  <object id="55" name="Fire" gid="17" x="256" y="1920" width="64" height="64"/>
+  <object id="132" name="Star" gid="22" x="64" y="1280" width="64" height="64"/>
+  <object id="195" name="Star" gid="22" x="64" y="1344" width="64" height="64"/>
+  <object id="205" name="Star" gid="22" x="64" y="1472" width="64" height="64"/>
+  <object id="215" name="Star" gid="22" x="64" y="1536" width="64" height="64"/>
+  <object id="225" name="Star" gid="22" x="64" y="1664" width="64" height="64"/>
+  <object id="139" name="Star" gid="22" x="256" y="1280" width="64" height="64"/>
+  <object id="188" name="Star" gid="22" x="256" y="1344" width="64" height="64"/>
+  <object id="198" name="Star" gid="22" x="256" y="1472" width="64" height="64"/>
+  <object id="208" name="Star" gid="22" x="256" y="1536" width="64" height="64"/>
+  <object id="218" name="Star" gid="22" x="256" y="1664" width="64" height="64"/>
+  <object id="133" name="Star" gid="22" x="64" y="1280" width="64" height="64"/>
+  <object id="194" name="Star" gid="22" x="64" y="1344" width="64" height="64"/>
+  <object id="204" name="Star" gid="22" x="64" y="1472" width="64" height="64"/>
+  <object id="214" name="Star" gid="22" x="64" y="1536" width="64" height="64"/>
+  <object id="224" name="Star" gid="22" x="64" y="1664" width="64" height="64"/>
+  <object id="138" name="Star" gid="22" x="256" y="1280" width="64" height="64"/>
+  <object id="189" name="Star" gid="22" x="256" y="1344" width="64" height="64"/>
+  <object id="199" name="Star" gid="22" x="256" y="1472" width="64" height="64"/>
+  <object id="209" name="Star" gid="22" x="256" y="1536" width="64" height="64"/>
+  <object id="219" name="Star" gid="22" x="256" y="1664" width="64" height="64"/>
+  <object id="134" name="Star" gid="22" x="128" y="1280" width="64" height="64"/>
+  <object id="193" name="Star" gid="22" x="128" y="1344" width="64" height="64"/>
+  <object id="203" name="Star" gid="22" x="128" y="1472" width="64" height="64"/>
+  <object id="213" name="Star" gid="22" x="128" y="1536" width="64" height="64"/>
+  <object id="223" name="Star" gid="22" x="128" y="1664" width="64" height="64"/>
+  <object id="137" name="Star" gid="22" x="320" y="1280" width="64" height="64"/>
+  <object id="190" name="Star" gid="22" x="320" y="1344" width="64" height="64"/>
+  <object id="200" name="Star" gid="22" x="320" y="1472" width="64" height="64"/>
+  <object id="210" name="Star" gid="22" x="320" y="1536" width="64" height="64"/>
+  <object id="220" name="Star" gid="22" x="320" y="1664" width="64" height="64"/>
+  <object id="140" name="Star" gid="22" x="448" y="1280" width="64" height="64"/>
+  <object id="186" name="Star" gid="22" x="448" y="1344" width="64" height="64"/>
+  <object id="196" name="Star" gid="22" x="448" y="1472" width="64" height="64"/>
+  <object id="206" name="Star" gid="22" x="448" y="1536" width="64" height="64"/>
+  <object id="216" name="Star" gid="22" x="448" y="1664" width="64" height="64"/>
+  <object id="135" name="Star" gid="22" x="192" y="1280" width="64" height="64"/>
+  <object id="192" name="Star" gid="22" x="192" y="1344" width="64" height="64"/>
+  <object id="202" name="Star" gid="22" x="192" y="1472" width="64" height="64"/>
+  <object id="212" name="Star" gid="22" x="192" y="1536" width="64" height="64"/>
+  <object id="222" name="Star" gid="22" x="192" y="1664" width="64" height="64"/>
+  <object id="136" name="Star" gid="22" x="384" y="1280" width="64" height="64"/>
+  <object id="191" name="Star" gid="22" x="384" y="1344" width="64" height="64"/>
+  <object id="201" name="Star" gid="22" x="384" y="1472" width="64" height="64"/>
+  <object id="211" name="Star" gid="22" x="384" y="1536" width="64" height="64"/>
+  <object id="221" name="Star" gid="22" x="384" y="1664" width="64" height="64"/>
+  <object id="141" name="Star" gid="22" x="512" y="1280" width="64" height="64"/>
+  <object id="187" name="Star" gid="22" x="512" y="1344" width="64" height="64"/>
+  <object id="197" name="Star" gid="22" x="512" y="1472" width="64" height="64"/>
+  <object id="207" name="Star" gid="22" x="512" y="1536" width="64" height="64"/>
+  <object id="217" name="Star" gid="22" x="512" y="1664" width="64" height="64"/>
+  <object id="185" name="Star" gid="22" x="448" y="704" width="64" height="64"/>
+  <object id="227" name="Star" gid="22" x="512" y="1600" width="64" height="64"/>
+  <object id="226" name="Star" gid="22" x="64" y="1408" width="64" height="64"/>
+  <object id="184" name="Star" gid="22" x="192" y="960" width="64" height="64"/>
+ </objectgroup>
+</map>

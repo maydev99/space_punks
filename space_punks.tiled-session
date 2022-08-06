@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "assets/tiles/level1.tmx",
+    "activeFile": "assets/tiles/rocket_level.tmx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -21,11 +21,15 @@
                 2
             ],
             "scale": 0.65,
-            "selectedLayer": -1,
+            "selectedLayer": 3,
             "viewCenter": {
                 "x": 955.3846153846154,
                 "y": 488.46153846153845
             }
+        },
+        "assets/tiles/level1.tmx#more_tile": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
         },
         "assets/tiles/level1.tmx#punky_64": {
             "scaleInDock": 1
@@ -48,12 +52,13 @@
         },
         "assets/tiles/level1.tmx#sky5": {
             "dynamicWrapping": true,
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "assets/tiles/level2.tmx": {
             "expandedObjectLayers": [
-                3,
-                5
+                5,
+                3
             ],
             "scale": 0.65,
             "selectedLayer": 3,
@@ -71,11 +76,17 @@
                 2
             ],
             "scale": 1,
-            "selectedLayer": 0,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 303,
-                "y": 534.5
+                "x": 302,
+                "y": 778.5
             }
+        },
+        "assets/tiles/rocket_level.tmx#lava_1": {
+            "scaleInDock": 1
+        },
+        "assets/tiles/rocket_level.tmx#more_tile": {
+            "scaleInDock": 1
         },
         "assets/tiles/rocket_level.tmx#rocket_inside_tiles": {
             "scaleInDock": 1
@@ -96,14 +107,16 @@
     "openFiles": [
         "assets/tiles/spritesheet.tsx",
         "assets/tiles/level1.tmx",
-        "assets/tiles/level2.tmx"
+        "assets/tiles/level2.tmx",
+        "assets/tiles/rocket_level.tmx"
     ],
     "project": "space_punks.tiled-project",
     "property.type": "string",
     "recentFiles": [
         "assets/tiles/spritesheet.tsx",
+        "assets/tiles/level1.tmx",
         "assets/tiles/level2.tmx",
-        "assets/tiles/level1.tmx"
+        "assets/tiles/rocket_level.tmx"
     ],
     "tileset.embedInMap": true,
     "tileset.lastUsedFormat": "tsx",

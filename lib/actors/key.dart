@@ -46,10 +46,10 @@ class Key extends SpriteComponent with CollisionCallbacks, HasGameRef<GameMain>{
     if (other is Player) {
       add(
         OpacityEffect.fadeOut(LinearEffectController(0.3), onComplete: () {
-          //gameRef.makeAToast('You found a Key');
+          gameRef.makeAToast('You found a Key');
           print('Key');
           add(RemoveEffect());
-          //gameRef.playerData.key.value = true;
+          gameRef.playerData.key.value = true;
         }),
       );
 
