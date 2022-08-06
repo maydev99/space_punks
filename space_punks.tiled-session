@@ -61,7 +61,7 @@
                 3
             ],
             "scale": 0.65,
-            "selectedLayer": 3,
+            "selectedLayer": 0,
             "viewCenter": {
                 "x": 959.9999999999999,
                 "y": 640.7692307692307
@@ -76,10 +76,10 @@
                 2
             ],
             "scale": 1,
-            "selectedLayer": 1,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 302,
-                "y": 778.5
+                "x": 300,
+                "y": 359.5
             }
         },
         "assets/tiles/rocket_level.tmx#lava_1": {

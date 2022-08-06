@@ -57,7 +57,7 @@
   <object id="36" name="Player" x="320" y="384" width="64" height="64"/>
   <object id="38" name="Door" gid="6" x="256" y="320" width="64" height="64">
    <properties>
-    <property name="NextLevel" value="level1.tmx"/>
+    <property name="NextLevel" value="level2.tmx"/>
    </properties>
   </object>
   <object id="39" name="Key" gid="9" x="512" y="2496" width="64" height="64"/>
