@@ -30,7 +30,7 @@ class Player extends SpriteAnimationGroupComponent with CollisionCallbacks, Keyb
   int _hAxisInput = 0;
   bool _jumpInput = false;
   bool _isOnGround = false;
-  final Vector2 _velocity = Vector2.zero();
+  final Vector2 velocity = Vector2.zero();
   final double _moveSpeed = 100;
   final double _gravity = 30;
   final double _jumpSpeed = 900;
@@ -42,6 +42,7 @@ class Player extends SpriteAnimationGroupComponent with CollisionCallbacks, Keyb
   late String _levelName;
   final Timer _idleTimer = Timer(2);
   bool isIdle = false;
+  int injuryCount = 0;
 
   static final Vector2  _down = Vector2(0, 1);
 
@@ -106,11 +107,11 @@ class Player extends SpriteAnimationGroupComponent with CollisionCallbacks, Keyb
 
 
 
-    _velocity.x = _hAxisInput * _moveSpeed;
-    _velocity.y += _gravity;
+    velocity.x = _hAxisInput * _moveSpeed;
+    velocity.y += _gravity;
 
     // print(_velocity.y);
-    if(_velocity.x != 0) {
+    if(velocity.x != 0) {
       current = PlayerState.run;
     } else {
       current = PlayerState.stand;
@@ -119,7 +120,7 @@ class Player extends SpriteAnimationGroupComponent with CollisionCallbacks, Keyb
 
 
 
-    if(_velocity.y < _gravity) {
+    if(velocity.y < _gravity) {
       _isOnGround = false;
       current = PlayerState.jump;
     }
@@ -135,7 +136,7 @@ class Player extends SpriteAnimationGroupComponent with CollisionCallbacks, Keyb
     if (_jumpInput) {
       current = PlayerState.jump;
       if (_isOnGround) {
-        _velocity.y = -_jumpSpeed;
+        velocity.y = -_jumpSpeed;
         _isOnGround = false;
         current = PlayerState.run;
 
@@ -148,9 +149,9 @@ class Player extends SpriteAnimationGroupComponent with CollisionCallbacks, Keyb
 
 
     //Terminal Velocity
-    _velocity.y = _velocity.y.clamp(-_jumpSpeed, 400);
+    velocity.y = velocity.y.clamp(-_jumpSpeed, 400);
 
-    position += _velocity * dt;
+    position += velocity * dt;
 
     position.clamp(_minClamp, _maxClamp);
 
@@ -208,10 +209,6 @@ class Player extends SpriteAnimationGroupComponent with CollisionCallbacks, Keyb
 
 
 
-    if(other is Fire) {
-
-    }
-
     super.onCollision(intersectionPoints, other);
   }
 
@@ -248,14 +245,14 @@ class Player extends SpriteAnimationGroupComponent with CollisionCallbacks, Keyb
 
   void stopJump() {
     if(_isOnGround) {
-      _velocity.x = 0;
-      _velocity.y = 0;
+      velocity.x = 0;
+      velocity.y = 0;
     }
   }
 
   void teleportToPosition(Vector2 destination) {
     position = Vector2(destination.x, destination.y);
-    _velocity.x = 0;
+    velocity.x = 0;
   }
 
   void squashEnemyAnim() {

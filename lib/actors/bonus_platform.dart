@@ -1,5 +1,6 @@
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
+import 'package:flame/effects.dart';
 import 'package:flame/image_composition.dart';
 import 'package:space_punks/actors/platform.dart';
 import 'package:space_punks/actors/player.dart';
@@ -45,15 +46,17 @@ class BonusPlatform extends SpriteComponent
       final playerDir = (other.absoluteCenter - absoluteCenter).normalized();
 
       if (playerDir.dot(_bottom) > 0.85) {
-        /*//gameRef.playerData.hasSpawnedHiddenStars.value = true;
+        //gameRef.playerData.hasSpawnedHiddenStars.value = true;
         if (!isTriggered) {
           gameRef.playerData.score.value += 50;
           gameRef.playerData.bonusLifePointCount.value += 50;
           isTriggered = true;
           gameRef.makeImageToast('50 Star Bonus', 'star.png');
+
+          add(ColorEffect(const Color.fromARGB(50, 10, 10, 10), const Offset(0, 0.5), EffectController(duration: 0.5)));
         }
 
-        other.velocity.y = 0;*/
+        other.velocity.y = 0;
       }
     }
     super.onCollisionStart(intersectionPoints, other);

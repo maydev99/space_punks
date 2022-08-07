@@ -47,7 +47,8 @@ class Fire extends SpriteAnimationGroupComponent
   void onCollisionStart(
       Set<Vector2> intersectionPoints, PositionComponent other) {
     if (other is Player) {
-      print('Fire');
+      //print('Fire');
+      gameRef.playerData.injuryLevel.value += 1;
 
     }
     super.onCollisionStart(intersectionPoints, other);

@@ -25,6 +25,7 @@ class GameMain extends FlameGame with HasCollisionDetection, HasTappableComponen
   final playerData = PlayerData();
   late int score;
   late int high;
+  late int injuryLevel;
   final Timer _toastTimer = Timer(1);
   bool isShowingToast = false;
   var box = GetStorage();
@@ -41,7 +42,7 @@ class GameMain extends FlameGame with HasCollisionDetection, HasTappableComponen
     screenY = size.y;
 
     camera.viewport = FixedResolutionViewport(Vector2(900,450));
-    loadLevel('level1.tmx');
+    loadLevel('level3.tmx');
 
     return super.onLoad();
   }
@@ -63,6 +64,8 @@ class GameMain extends FlameGame with HasCollisionDetection, HasTappableComponen
     int lives = playerData.health.value;
     score = playerData.score.value;
     high = playerData.highScore.value;
+    injuryLevel = playerData.injuryLevel.value;
+    print(injuryLevel);
     saveHighScore();
 
     int bonusLifePointCount = playerData.bonusLifePointCount.value;
@@ -78,6 +81,12 @@ class GameMain extends FlameGame with HasCollisionDetection, HasTappableComponen
       makeAToast('Bonus Life +1');
       playerData.health.value += 1;
       playerData.bonusLifePointCount.value = 0;
+    }
+
+    if(injuryLevel > 30) {
+      playerData.health.value -= 1;
+      playerData.injuryLevel.value = 0;
+
     }
 
     if (!isShowingToast) {
@@ -104,18 +113,24 @@ class GameMain extends FlameGame with HasCollisionDetection, HasTappableComponen
   }
 
   void makeAToast(String message) {
-    playerData.toast.value = message;
-    isShowingToast = true;
-    overlays.add(ToastOverlay.id);
-    _toastTimer.start();
+    if(!isShowingToast) {
+      playerData.toast.value = message;
+      isShowingToast = true;
+      overlays.add(ToastOverlay.id);
+      _toastTimer.start();
+    }
+
   }
 
   void makeImageToast(String message, String image) {
-    playerData.toast.value = message;
-    playerData.toastImage.value = image;
-    isShowingToast = true;
-    overlays.add(ToastImageOverlay.id);
-    _toastTimer.start();
+    if(!isShowingToast) {
+      playerData.toast.value = message;
+      playerData.toastImage.value = image;
+      isShowingToast = true;
+      overlays.add(ToastImageOverlay.id);
+      _toastTimer.start();
+    }
+
   }
   void loadLevel(String levelName) {
     currentLevel?.removeFromParent();

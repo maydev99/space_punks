@@ -10,4 +10,5 @@ class PlayerData {
   final highScore = ValueNotifier<int>(0);
   final hasBeenNotifiedOfHighScore = ValueNotifier<bool>(false);
   final hasSpawnedHiddenStars = ValueNotifier<bool>(false);
+  final injuryLevel = ValueNotifier<int>(0);
 }

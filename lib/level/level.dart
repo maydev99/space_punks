@@ -1,6 +1,7 @@
 import 'package:flame/components.dart';
 import 'package:flame/extensions.dart';
 import 'package:flame_tiled/flame_tiled.dart';
+import 'package:space_punks/actors/bonus_platform.dart';
 import 'package:space_punks/actors/door.dart';
 import 'package:space_punks/actors/enemy.dart';
 import 'package:space_punks/actors/fire.dart';
@@ -155,6 +156,13 @@ class Level extends Component with HasGameRef<GameMain> {
               targetPosition: Vector2(target.x, target.y),
               size: size);
           add(movingPlatform);
+          break;
+
+        case 'BonusPlatform':
+          final bonusPlatform = BonusPlatform(gameRef.spritesheet,
+              position: position,
+              size: size);
+          add(bonusPlatform);
           break;
       }
     }

@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "assets/tiles/rocket_level.tmx",
+    "activeFile": "assets/tiles/level2.tmx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -61,13 +61,34 @@
                 3
             ],
             "scale": 0.65,
-            "selectedLayer": 0,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 959.9999999999999,
+                "x": 1194.6153846153845,
                 "y": 640.7692307692307
             }
         },
+        "assets/tiles/level2.tmx#more_tile": {
+            "scaleInDock": 1
+        },
         "assets/tiles/level2.tmx#punky_64": {
+            "scaleInDock": 1
+        },
+        "assets/tiles/level3.tmx": {
+            "expandedObjectLayers": [
+                3,
+                2
+            ],
+            "scale": 0.75,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 975.3333333333334,
+                "y": 602
+            }
+        },
+        "assets/tiles/level3.tmx#bob_walk_2": {
+            "scaleInDock": 1
+        },
+        "assets/tiles/level3.tmx#more_tile": {
             "scaleInDock": 1
         },
         "assets/tiles/rocket_level.tmx": {
@@ -78,8 +99,8 @@
             "scale": 1,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 300,
-                "y": 359.5
+                "x": 298,
+                "y": 778.5
             }
         },
         "assets/tiles/rocket_level.tmx#lava_1": {
@@ -98,12 +119,12 @@
         }
     },
     "last.imagePath": "/Users/michaelmay/AndroidStudioProjects/space_punks/assets/images",
-    "map.height": 40,
+    "map.height": 20,
     "map.lastUsedFormat": "tmx",
     "map.layerDataFormat": null,
     "map.tileHeight": 64,
     "map.tileWidth": 64,
-    "map.width": 10,
+    "map.width": 30,
     "openFiles": [
         "assets/tiles/spritesheet.tsx",
         "assets/tiles/level1.tmx",
@@ -111,12 +132,12 @@
         "assets/tiles/rocket_level.tmx"
     ],
     "project": "space_punks.tiled-project",
-    "property.type": "string",
+    "property.type": "object",
     "recentFiles": [
         "assets/tiles/spritesheet.tsx",
         "assets/tiles/level1.tmx",
-        "assets/tiles/level2.tmx",
-        "assets/tiles/rocket_level.tmx"
+        "assets/tiles/rocket_level.tmx",
+        "assets/tiles/level2.tmx"
     ],
     "tileset.embedInMap": true,
     "tileset.lastUsedFormat": "tsx",

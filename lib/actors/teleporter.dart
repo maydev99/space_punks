@@ -40,6 +40,7 @@ class Teleporter extends SpriteComponent with CollisionCallbacks, HasGameRef<Gam
   void onCollisionStart(
       Set<Vector2> intersectionPoints, PositionComponent other) {
     if (other is Player) {
+      gameRef.makeAToast('Teleported');
       onPlayerEnter?.call();
 
     }
