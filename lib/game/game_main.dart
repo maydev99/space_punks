@@ -19,6 +19,7 @@ class GameMain extends FlameGame with HasCollisionDetection, HasTappableComponen
   late Image fireSpriteSheet;
   late Image bob;
   late Image moreTile;
+  late Image marsTiles;
   late TapComponent tapComponent;
   late double screenX;
   late double screenY;
@@ -38,11 +39,12 @@ class GameMain extends FlameGame with HasCollisionDetection, HasTappableComponen
     punky = await images.load('punky_64.png');
     bob = await images.load('bob_walk_2.png');
     moreTile = await images.load('more_tile.png');
+    marsTiles = await images.load('mars_tiles.png');
     screenX = size.x;
     screenY = size.y;
 
     camera.viewport = FixedResolutionViewport(Vector2(900,450));
-    loadLevel('level3.tmx');
+    loadLevel('level4.tmx');
 
     return super.onLoad();
   }

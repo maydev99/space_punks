@@ -81,7 +81,7 @@
             "scale": 0.75,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 975.3333333333334,
+                "x": 1059.3333333333335,
                 "y": 602
             }
         },
@@ -89,6 +89,23 @@
             "scaleInDock": 1
         },
         "assets/tiles/level3.tmx#more_tile": {
+            "scaleInDock": 1
+        },
+        "assets/tiles/level4.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 989.9999999999999,
+                "y": 607.3333333333333
+            }
+        },
+        "assets/tiles/level4.tmx#bob_walk_2": {
+            "scaleInDock": 1
+        },
+        "assets/tiles/level4.tmx#mars_tiles": {
+            "scaleInDock": 1
+        },
+        "assets/tiles/level4.tmx#more_tile": {
             "scaleInDock": 1
         },
         "assets/tiles/rocket_level.tmx": {
@@ -132,7 +149,7 @@
         "assets/tiles/rocket_level.tmx"
     ],
     "project": "space_punks.tiled-project",
-    "property.type": "object",
+    "property.type": "string",
     "recentFiles": [
         "assets/tiles/spritesheet.tsx",
         "assets/tiles/level1.tmx",
