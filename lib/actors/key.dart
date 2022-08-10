@@ -4,6 +4,7 @@ import 'package:flame/components.dart';
 import 'package:flame/effects.dart';
 import 'package:flame/image_composition.dart';
 import 'package:space_punks/actors/player.dart';
+import 'package:space_punks/mechanics/audio_manager.dart';
 
 import '../game/game_main.dart';
 
@@ -44,6 +45,7 @@ class Key extends SpriteComponent with CollisionCallbacks, HasGameRef<GameMain>{
   void onCollisionStart(
       Set<Vector2> intersectionPoints, PositionComponent other) {
     if (other is Player) {
+      AudioManager.instance.playDingSound();
       add(
         OpacityEffect.fadeOut(LinearEffectController(0.3), onComplete: () {
           gameRef.makeAToast('You found a Key');

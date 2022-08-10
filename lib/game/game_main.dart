@@ -6,6 +6,7 @@ import 'package:flame/game.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:space_punks/game/player_data.dart';
 import 'package:space_punks/level/level.dart';
+import 'package:space_punks/mechanics/audio_manager.dart';
 import 'package:space_punks/mechanics/tap_component.dart';
 import 'package:space_punks/overlays/game_over_overlay.dart';
 import 'package:space_punks/overlays/hud_overlay.dart';
@@ -31,8 +32,11 @@ class GameMain extends FlameGame with HasCollisionDetection, HasTappableComponen
   bool isShowingToast = false;
   var box = GetStorage();
 
+  static const _audioAssets = ['pop.mp3'];
+
   @override
   Future<void>? onLoad() async{
+    await AudioManager.instance.init(_audioAssets);
 
     spritesheet = await images.load('spritesheet.png');
     fireSpriteSheet = await images.load('lava_1.png');
@@ -44,7 +48,7 @@ class GameMain extends FlameGame with HasCollisionDetection, HasTappableComponen
     screenY = size.y;
 
     camera.viewport = FixedResolutionViewport(Vector2(900,450));
-    loadLevel('level4.tmx');
+    loadLevel('level1.tmx');
 
     return super.onLoad();
   }
@@ -67,7 +71,7 @@ class GameMain extends FlameGame with HasCollisionDetection, HasTappableComponen
     score = playerData.score.value;
     high = playerData.highScore.value;
     injuryLevel = playerData.injuryLevel.value;
-    print(injuryLevel);
+    //print(injuryLevel);
     saveHighScore();
 
     int bonusLifePointCount = playerData.bonusLifePointCount.value;
@@ -86,6 +90,7 @@ class GameMain extends FlameGame with HasCollisionDetection, HasTappableComponen
     }
 
     if(injuryLevel > 30) {
+      AudioManager.instance.playOhSound();
       playerData.health.value -= 1;
       playerData.injuryLevel.value = 0;
 

@@ -6,6 +6,7 @@ import 'package:flame/image_composition.dart';
 import 'package:flutter/animation.dart';
 import 'package:space_punks/actors/player.dart';
 import 'package:space_punks/game/game_main.dart';
+import 'package:space_punks/mechanics/audio_manager.dart';
 
 
 
@@ -52,6 +53,7 @@ class Star extends SpriteComponent
   void onCollisionStart(
       Set<Vector2> intersectionPoints, PositionComponent other) {
     if (other is Player) {
+      AudioManager.instance.playPopSound();
       add(
         OpacityEffect.fadeOut(LinearEffectController(0.3), onComplete: () {
           add(RemoveEffect());

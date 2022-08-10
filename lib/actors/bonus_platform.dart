@@ -5,6 +5,7 @@ import 'package:flame/image_composition.dart';
 import 'package:space_punks/actors/platform.dart';
 import 'package:space_punks/actors/player.dart';
 import 'package:space_punks/game/game_main.dart';
+import 'package:space_punks/mechanics/audio_manager.dart';
 
 
 class BonusPlatform extends SpriteComponent
@@ -48,6 +49,7 @@ class BonusPlatform extends SpriteComponent
       if (playerDir.dot(_bottom) > 0.85) {
         //gameRef.playerData.hasSpawnedHiddenStars.value = true;
         if (!isTriggered) {
+          AudioManager.instance.playBonusSound();
           gameRef.playerData.score.value += 50;
           gameRef.playerData.bonusLifePointCount.value += 50;
           isTriggered = true;

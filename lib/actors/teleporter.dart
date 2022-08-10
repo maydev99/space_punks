@@ -3,6 +3,7 @@ import 'package:flame/components.dart';
 import 'package:flame/image_composition.dart';
 import 'package:space_punks/actors/player.dart';
 import 'package:space_punks/game/game_main.dart';
+import 'package:space_punks/mechanics/audio_manager.dart';
 
 
 // Represents a Teleporter in the game world.
@@ -40,6 +41,7 @@ class Teleporter extends SpriteComponent with CollisionCallbacks, HasGameRef<Gam
   void onCollisionStart(
       Set<Vector2> intersectionPoints, PositionComponent other) {
     if (other is Player) {
+      AudioManager.instance.playTeleportSound();
       gameRef.makeAToast('Teleported');
       onPlayerEnter?.call();
 

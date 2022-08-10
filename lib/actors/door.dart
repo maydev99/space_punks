@@ -1,7 +1,9 @@
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 import 'package:flame/image_composition.dart';
+import 'package:flame_audio/audio_pool.dart';
 import 'package:space_punks/actors/player.dart';
+import 'package:space_punks/mechanics/audio_manager.dart';
 
 import '../game/game_main.dart';
 
@@ -43,11 +45,13 @@ class Door extends SpriteComponent with CollisionCallbacks, HasGameRef<GameMain>
       Set<Vector2> intersectionPoints, PositionComponent other) {
     if (other is Player) {
       if(gameRef.playerData.key.value) {
+        AudioManager.instance.playUnlockSound();
         gameRef.makeAToast('Level Complete');
         other.removeFromParent();
         onPlayerEnter?.call();
         gameRef.playerData.key.value = false;
       } else {
+        AudioManager.instance.playLockedSound();
         gameRef.makeAToast('Locked');
       }
 

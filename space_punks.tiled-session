@@ -92,6 +92,10 @@
             "scaleInDock": 1
         },
         "assets/tiles/level4.tmx": {
+            "expandedObjectLayers": [
+                3,
+                2
+            ],
             "scale": 0.75,
             "selectedLayer": 3,
             "viewCenter": {

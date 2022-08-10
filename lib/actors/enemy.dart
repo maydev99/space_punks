@@ -3,6 +3,7 @@ import 'package:flame/components.dart';
 import 'package:flame/effects.dart';
 import 'package:flame/image_composition.dart';
 import 'package:space_punks/actors/player.dart';
+import 'package:space_punks/mechanics/audio_manager.dart';
 
 import '../game/game_main.dart';
 
@@ -74,10 +75,12 @@ class Enemy extends SpriteComponent
         );
 
         print('Squash');
+        AudioManager.instance.playSquishSound();
         gameRef.playerData.score.value += 20;
         gameRef.playerData.bonusLifePointCount.value += 20;
         other.jump = true;
       } else {
+        AudioManager.instance.playOhSound();
         other.hit();
         if (gameRef.playerData.health.value > 0) {
          gameRef.playerData.health.value -= 1;
