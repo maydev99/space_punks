@@ -4,6 +4,7 @@ import 'package:space_punks/game/game_main.dart';
 import 'package:space_punks/overlays/game_over_overlay.dart';
 import 'package:space_punks/overlays/hud_overlay.dart';
 import 'package:space_punks/overlays/pause_overlay.dart';
+import 'package:space_punks/overlays/story_overlay.dart';
 import 'package:space_punks/overlays/toast_image_overlay.dart';
 import 'package:space_punks/overlays/toast_overlay.dart';
 
@@ -35,9 +36,10 @@ class GameScreenState extends State<GameScreen> {
                 ToastImageOverlay.id: (_,GameMain gameRef) => ToastImageOverlay(gameRef: _gameMain),
                 ToastOverlay.id: (_, GameMain gameRef) => ToastOverlay(gameRef: _gameMain),
                 GameOverOverlay.id: (_, GameMain gameRef) => GameOverOverlay(gameRef: _gameMain),
+                StoryOverlay.id: (_,GameMain gameRef) => StoryOverlay(gameRef: _gameMain),
 
               },
-              initialActiveOverlays: const [HudOverlay.id],
+              initialActiveOverlays: const [StoryOverlay.id],
               game: _gameMain,
             ),
           )),
