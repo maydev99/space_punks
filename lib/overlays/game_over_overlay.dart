@@ -58,7 +58,7 @@ class GameOverOverlayState extends State<GameOverOverlay> {
                 MaterialButton(
                   onPressed: () {
                     gameRef.restartGame();
-                    gameRef.loadLevel('level1.tmx');
+                    gameRef.loadLevel('pre_level_1.tmx');
                     gameRef.resumeEngine();
                     gameRef.overlays.remove(GameOverOverlay.id);
                     gameRef.overlays.add(HudOverlay.id);

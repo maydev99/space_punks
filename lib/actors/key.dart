@@ -25,7 +25,7 @@ class Key extends SpriteComponent with CollisionCallbacks, HasGameRef<GameMain>{
         int? priority,
       }) : super.fromImage(
     image,
-    srcPosition: Vector2(64, 64),
+    srcPosition: Vector2(64, 65),
     srcSize: Vector2.all(62),
     position: position,
     size: size,
@@ -48,7 +48,7 @@ class Key extends SpriteComponent with CollisionCallbacks, HasGameRef<GameMain>{
       AudioManager.instance.playDingSound();
       add(
         OpacityEffect.fadeOut(LinearEffectController(0.3), onComplete: () {
-          gameRef.makeAToast('You found a Key');
+          gameRef.makeImageToast('You found a Key', 'key_24.png');
           print('Key');
           add(RemoveEffect());
           gameRef.playerData.key.value = true;

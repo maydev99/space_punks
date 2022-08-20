@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "assets/tiles/level2.tmx",
+    "activeFile": "assets/tiles/pre_level_1.tmx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -15,6 +15,10 @@
             "dynamicWrapping": true,
             "scaleInEditor": 1
         },
+        "assets/tiles/control_image_half.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "assets/tiles/level1.tmx": {
             "expandedObjectLayers": [
                 3,
@@ -24,7 +28,7 @@
             "selectedLayer": 3,
             "viewCenter": {
                 "x": 955.3846153846154,
-                "y": 488.46153846153845
+                "y": 490
             }
         },
         "assets/tiles/level1.tmx#more_tile": {
@@ -57,13 +61,13 @@
         },
         "assets/tiles/level2.tmx": {
             "expandedObjectLayers": [
-                5,
-                3
+                3,
+                5
             ],
             "scale": 0.65,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 1194.6153846153845,
+                "x": 960,
                 "y": 640.7692307692307
             }
         },
@@ -81,8 +85,8 @@
             "scale": 0.75,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 1059.3333333333335,
-                "y": 602
+                "x": 959.9999999999999,
+                "y": 640.6666666666666
             }
         },
         "assets/tiles/level3.tmx#bob_walk_2": {
@@ -99,8 +103,8 @@
             "scale": 0.75,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 989.9999999999999,
-                "y": 607.3333333333333
+                "x": 959.9999999999999,
+                "y": 640.6666666666666
             }
         },
         "assets/tiles/level4.tmx#bob_walk_2": {
@@ -112,19 +116,116 @@
         "assets/tiles/level4.tmx#more_tile": {
             "scaleInDock": 1
         },
+        "assets/tiles/level5.tmx": {
+            "expandedObjectLayers": [
+                3,
+                2
+            ],
+            "scale": 0.75,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 915.9999999999999,
+                "y": 670
+            }
+        },
+        "assets/tiles/pre_level_1.tmx": {
+            "expandedObjectLayers": [
+                3,
+                2
+            ],
+            "scale": 0.75,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 986.6666666666665,
+                "y": 390
+            }
+        },
+        "assets/tiles/pre_level_1.tmx#ZCS_3_button": {
+            "scaleInEditor": 1
+        },
+        "assets/tiles/pre_level_1.tmx#bob_walk_2": {
+            "scaleInDock": 1
+        },
+        "assets/tiles/pre_level_1.tmx#control_image_half": {
+            "dynamicWrapping": true
+        },
+        "assets/tiles/pre_level_1.tmx#mars_tiles": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "assets/tiles/pre_level_2.tmx": {
+            "expandedObjectLayers": [
+                3,
+                2
+            ],
+            "scale": 0.75,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 961.3333333333334,
+                "y": 456.66666666666663
+            }
+        },
+        "assets/tiles/pre_level_2.tmx#bob_walk_2": {
+            "scaleInDock": 1
+        },
+        "assets/tiles/pre_level_2.tmx#more_tile": {
+            "scaleInDock": 1
+        },
+        "assets/tiles/pre_level_3.tmx": {
+            "expandedObjectLayers": [
+                3,
+                2
+            ],
+            "scale": 0.75,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 945.3333333333334,
+                "y": 619.3333333333333
+            }
+        },
+        "assets/tiles/pre_level_4.tmx": {
+            "expandedObjectLayers": [
+                3,
+                2
+            ],
+            "scale": 0.75,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 1013.3333333333334,
+                "y": 787.3333333333333
+            }
+        },
+        "assets/tiles/pre_level_5.tmx": {
+            "expandedObjectLayers": [
+                3,
+                2
+            ],
+            "scale": 0.75,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 947.9999999999999,
+                "y": 499.33333333333326
+            }
+        },
+        "assets/tiles/rocket_inside_tiles.tsx": {
+            "scaleInEditor": 1
+        },
         "assets/tiles/rocket_level.tmx": {
             "expandedObjectLayers": [
                 3,
                 2
             ],
             "scale": 1,
-            "selectedLayer": 3,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 298,
-                "y": 778.5
+                "x": 320,
+                "y": 1279.5
             }
         },
         "assets/tiles/rocket_level.tmx#lava_1": {
+            "scaleInDock": 1
+        },
+        "assets/tiles/rocket_level.tmx#mars_tiles": {
             "scaleInDock": 1
         },
         "assets/tiles/rocket_level.tmx#more_tile": {
@@ -150,17 +251,26 @@
         "assets/tiles/spritesheet.tsx",
         "assets/tiles/level1.tmx",
         "assets/tiles/level2.tmx",
-        "assets/tiles/rocket_level.tmx"
+        "assets/tiles/rocket_level.tmx",
+        "assets/tiles/level3.tmx",
+        "assets/tiles/level4.tmx",
+        "assets/tiles/pre_level_1.tmx"
     ],
     "project": "space_punks.tiled-project",
-    "property.type": "string",
+    "property.type": "object",
     "recentFiles": [
         "assets/tiles/spritesheet.tsx",
+        "assets/tiles/rocket_inside_tiles.tsx",
+        "assets/tiles/pre_level_5.tmx",
         "assets/tiles/level1.tmx",
+        "assets/tiles/level2.tmx",
         "assets/tiles/rocket_level.tmx",
-        "assets/tiles/level2.tmx"
+        "assets/tiles/level3.tmx",
+        "assets/tiles/level4.tmx",
+        "assets/tiles/pre_level_1.tmx",
+        "assets/tiles/control_image_half.tsx"
     ],
-    "tileset.embedInMap": true,
+    "tileset.embedInMap": false,
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
         "height": 64,

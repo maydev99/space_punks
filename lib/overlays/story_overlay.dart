@@ -51,7 +51,7 @@ class StoryOverlayState extends State<StoryOverlay> {
               direction: Axis.vertical,
               crossAxisAlignment: WrapCrossAlignment.center,
               children: [
-                Image.asset('assets/images/zcs_tut.gif'),
+                Image.asset('assets/images/tut3_gif.gif'),
                 MaterialButton(
                   onPressed: () {
                     gameRef.overlays.remove(StoryOverlay.id);
