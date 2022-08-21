@@ -46,7 +46,7 @@
     <property name="NextLevel" value="level3.tmx"/>
    </properties>
   </object>
-  <object id="12" name="Player" gid="13" x="64" y="1216" width="64" height="64"/>
+  <object id="12" name="Player" gid="13" x="0" y="1216" width="64" height="64"/>
   <object id="13" name="Key" gid="5" x="0" y="128" width="64" height="64"/>
   <object id="14" name="Teleporter" gid="12" x="1728" y="1216" width="64" height="64">
    <properties>
@@ -114,7 +114,7 @@
   <object id="55" x="1600" y="1152">
    <point/>
   </object>
-  <object id="56" x="64" y="1152">
+  <object id="56" x="128" y="1152">
    <point/>
   </object>
   <object id="57" x="448" y="1152">

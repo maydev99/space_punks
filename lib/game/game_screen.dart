@@ -8,6 +8,8 @@ import 'package:space_punks/overlays/story_overlay.dart';
 import 'package:space_punks/overlays/toast_image_overlay.dart';
 import 'package:space_punks/overlays/toast_overlay.dart';
 
+import '../overlays/story_overlay2.dart';
+
 GameMain _gameMain = GameMain();
 
 class GameScreen extends StatefulWidget {
@@ -37,9 +39,10 @@ class GameScreenState extends State<GameScreen> {
                 ToastOverlay.id: (_, GameMain gameRef) => ToastOverlay(gameRef: _gameMain),
                 GameOverOverlay.id: (_, GameMain gameRef) => GameOverOverlay(gameRef: _gameMain),
                 StoryOverlay.id: (_,GameMain gameRef) => StoryOverlay(gameRef: _gameMain),
+                StoryOverlay2.id: (_,GameMain gameRef) => StoryOverlay2(gameRef: _gameMain),
 
               },
-              initialActiveOverlays: const [StoryOverlay.id],
+              initialActiveOverlays: const [HudOverlay.id],
               game: _gameMain,
             ),
           )),

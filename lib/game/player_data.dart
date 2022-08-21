@@ -11,4 +11,6 @@ class PlayerData {
   final hasBeenNotifiedOfHighScore = ValueNotifier<bool>(false);
   final hasSpawnedHiddenStars = ValueNotifier<bool>(false);
   final injuryLevel = ValueNotifier<int>(0);
+  final storyImage = ValueNotifier<String>('assets/images/control_image_half2.png');
+  final storyText = ValueNotifier<String>('The Text Goes Here');
 }

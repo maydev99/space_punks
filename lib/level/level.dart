@@ -11,6 +11,8 @@ import 'package:space_punks/actors/platform.dart';
 import 'package:space_punks/actors/player.dart';
 import 'package:space_punks/actors/star.dart';
 import 'package:space_punks/actors/teleporter.dart';
+import 'package:space_punks/level/level_data.dart';
+import 'package:space_punks/overlays/story_overlay2.dart';
 import 'package:tiled/tiled.dart';
 import '../actors/background.dart';
 import '../game/game_main.dart';
@@ -19,6 +21,7 @@ class Level extends Component with HasGameRef<GameMain> {
   final String levelName;
   late Player player;
   late Rect levelBounds;
+  late LevelData levelData;
 
   late Background background;
 
@@ -29,7 +32,19 @@ class Level extends Component with HasGameRef<GameMain> {
   @override
   Future<void>? onLoad() async {
     final level = await TiledComponent.load(levelName, Vector2.all(64));
+    levelData = LevelData();
     //backgroundComponent = BackgroundComponent();
+
+    var storyData = levelData.storyData;
+
+
+
+    int storyIndex = storyData.indexWhere((element) => element.levelId == levelName.toString());
+
+    //print('StoryIndex: $storyIndex');
+
+
+    //print('StoryText: ${storyData[storyIndex].storyText}');
 
     if(levelName == 'rocket_level.tmx') {
       levelBounds = Rect.fromLTWH(
@@ -47,10 +62,19 @@ class Level extends Component with HasGameRef<GameMain> {
 
 
 
+
+
     await setBackground(level.tileMap);
     await add(level);
     await spawnActors(level.tileMap);
     await setupCamera();
+
+    if(storyIndex != -1) {
+      gameRef.playerData.storyText.value = storyData[storyIndex].storyText;
+      gameRef.playerData.storyImage.value = storyData[storyIndex].storyImage;
+      gameRef.overlays.add(StoryOverlay2.id);
+    }
+
     return super.onLoad();
   }
 

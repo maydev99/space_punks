@@ -15,20 +15,28 @@
             "dynamicWrapping": true,
             "scaleInEditor": 1
         },
+        "assets/tiles/bob_walk_2.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "assets/tiles/control_image_half.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "assets/tiles/lava_1.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "assets/tiles/level1.tmx": {
             "expandedObjectLayers": [
-                3,
-                2
+                2,
+                3
             ],
             "scale": 0.65,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 955.3846153846154,
-                "y": 490
+                "x": 960,
+                "y": 639.2307692307692
             }
         },
         "assets/tiles/level1.tmx#more_tile": {
@@ -61,8 +69,8 @@
         },
         "assets/tiles/level2.tmx": {
             "expandedObjectLayers": [
-                3,
-                5
+                5,
+                3
             ],
             "scale": 0.65,
             "selectedLayer": 3,
@@ -79,8 +87,8 @@
         },
         "assets/tiles/level3.tmx": {
             "expandedObjectLayers": [
-                3,
-                2
+                2,
+                3
             ],
             "scale": 0.75,
             "selectedLayer": 3,
@@ -97,8 +105,8 @@
         },
         "assets/tiles/level4.tmx": {
             "expandedObjectLayers": [
-                3,
-                2
+                2,
+                3
             ],
             "scale": 0.75,
             "selectedLayer": 3,
@@ -118,20 +126,24 @@
         },
         "assets/tiles/level5.tmx": {
             "expandedObjectLayers": [
-                3,
-                2
+                2,
+                3
             ],
             "scale": 0.75,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 915.9999999999999,
-                "y": 670
+                "x": 959.9999999999999,
+                "y": 640.6666666666666
             }
+        },
+        "assets/tiles/more_tile.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "assets/tiles/pre_level_1.tmx": {
             "expandedObjectLayers": [
-                3,
-                2
+                2,
+                3
             ],
             "scale": 0.75,
             "selectedLayer": 3,
@@ -155,14 +167,14 @@
         },
         "assets/tiles/pre_level_2.tmx": {
             "expandedObjectLayers": [
-                3,
-                2
+                2,
+                3
             ],
             "scale": 0.75,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 961.3333333333334,
-                "y": 456.66666666666663
+                "x": 959.9999999999999,
+                "y": 640.6666666666666
             }
         },
         "assets/tiles/pre_level_2.tmx#bob_walk_2": {
@@ -173,26 +185,26 @@
         },
         "assets/tiles/pre_level_3.tmx": {
             "expandedObjectLayers": [
-                3,
-                2
+                2,
+                3
             ],
             "scale": 0.75,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 945.3333333333334,
-                "y": 619.3333333333333
+                "x": 959.9999999999999,
+                "y": 640.6666666666666
             }
         },
         "assets/tiles/pre_level_4.tmx": {
             "expandedObjectLayers": [
-                3,
-                2
+                2,
+                3
             ],
             "scale": 0.75,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 1013.3333333333334,
-                "y": 787.3333333333333
+                "x": 959.9999999999999,
+                "y": 640.6666666666666
             }
         },
         "assets/tiles/pre_level_5.tmx": {
@@ -208,12 +220,13 @@
             }
         },
         "assets/tiles/rocket_inside_tiles.tsx": {
+            "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "assets/tiles/rocket_level.tmx": {
             "expandedObjectLayers": [
-                3,
-                2
+                2,
+                3
             ],
             "scale": 1,
             "selectedLayer": 1,
@@ -248,27 +261,35 @@
     "map.tileWidth": 64,
     "map.width": 30,
     "openFiles": [
-        "assets/tiles/spritesheet.tsx",
         "assets/tiles/level1.tmx",
         "assets/tiles/level2.tmx",
         "assets/tiles/rocket_level.tmx",
         "assets/tiles/level3.tmx",
         "assets/tiles/level4.tmx",
+        "assets/tiles/pre_level_2.tmx",
+        "assets/tiles/pre_level_3.tmx",
+        "assets/tiles/bob_walk_2.tsx",
+        "assets/tiles/more_tile.tsx",
+        "assets/tiles/pre_level_4.tmx",
+        "assets/tiles/lava_1.tsx",
+        "assets/tiles/level5.tmx",
         "assets/tiles/pre_level_1.tmx"
     ],
     "project": "space_punks.tiled-project",
     "property.type": "object",
     "recentFiles": [
-        "assets/tiles/spritesheet.tsx",
-        "assets/tiles/rocket_inside_tiles.tsx",
-        "assets/tiles/pre_level_5.tmx",
         "assets/tiles/level1.tmx",
         "assets/tiles/level2.tmx",
         "assets/tiles/rocket_level.tmx",
         "assets/tiles/level3.tmx",
         "assets/tiles/level4.tmx",
-        "assets/tiles/pre_level_1.tmx",
-        "assets/tiles/control_image_half.tsx"
+        "assets/tiles/pre_level_2.tmx",
+        "assets/tiles/pre_level_3.tmx",
+        "assets/tiles/bob_walk_2.tsx",
+        "assets/tiles/more_tile.tsx",
+        "assets/tiles/pre_level_4.tmx",
+        "assets/tiles/lava_1.tsx",
+        "assets/tiles/level5.tmx"
     ],
     "tileset.embedInMap": false,
     "tileset.lastUsedFormat": "tsx",
