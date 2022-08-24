@@ -47,7 +47,7 @@
   <object id="3" gid="27" x="704" y="384" width="64" height="64"/>
   <object id="4" name="Door" gid="2" x="1152" y="512" width="64" height="64">
    <properties>
-    <property name="NextLevel" value="pre_level_1.tmx"/>
+    <property name="NextLevel" value="level6.tmx"/>
    </properties>
   </object>
   <object id="5" name="Key" gid="5" x="192" y="512" width="64" height="64"/>

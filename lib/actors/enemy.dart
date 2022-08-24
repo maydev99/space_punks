@@ -25,7 +25,7 @@ class Enemy extends SpriteComponent
         Anchor? anchor,
         int? priority,
       }) : super.fromImage(image,
-      srcPosition: Vector2(0, 129),
+      srcPosition: Vector2(0, 130),
       srcSize: Vector2(62,62),
       position: position,
       size: size,
