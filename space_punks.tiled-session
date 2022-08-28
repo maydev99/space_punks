@@ -35,7 +35,7 @@
             "scale": 0.65,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 960,
+                "x": 960.7692307692307,
                 "y": 639.2307692307692
             }
         },
@@ -132,16 +132,28 @@
             "scale": 0.75,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 958.6666666666665,
+                "x": 1076.6666666666665,
                 "y": 640.6666666666666
             }
         },
         "assets/tiles/level6.tmx": {
+            "expandedObjectLayers": [
+                3,
+                2
+            ],
+            "scale": 0.75,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 988.6666666666665,
+                "y": 619.3333333333333
+            }
+        },
+        "assets/tiles/level7.tmx": {
             "scale": 0.75,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 943.9999999999999,
-                "y": 619.3333333333333
+                "x": 919.3333333333335,
+                "y": 618
             }
         },
         "assets/tiles/more_tile.tsx": {
@@ -181,7 +193,7 @@
             "scale": 0.75,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 959.9999999999999,
+                "x": 960.6666666666665,
                 "y": 640.6666666666666
             }
         },
@@ -199,7 +211,7 @@
             "scale": 0.75,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 959.9999999999999,
+                "x": 1077.9999999999998,
                 "y": 640.6666666666666
             }
         },
@@ -211,7 +223,7 @@
             "scale": 0.75,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 959.9999999999999,
+                "x": 1077.9999999999998,
                 "y": 640.6666666666666
             }
         },
@@ -223,7 +235,7 @@
             "scale": 0.75,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 947.9999999999999,
+                "x": 1065.9999999999998,
                 "y": 499.33333333333326
             }
         },
@@ -286,17 +298,17 @@
     "project": "space_punks.tiled-project",
     "property.type": "object",
     "recentFiles": [
-        "assets/tiles/level1.tmx",
-        "assets/tiles/pre_level_1.tmx",
-        "assets/tiles/level5.tmx",
-        "assets/tiles/lava_1.tsx",
-        "assets/tiles/pre_level_4.tmx",
-        "assets/tiles/more_tile.tsx",
-        "assets/tiles/bob_walk_2.tsx",
+        "assets/tiles/level6.tmx",
         "assets/tiles/pre_level_3.tmx",
+        "assets/tiles/level3.tmx",
+        "assets/tiles/level1.tmx",
+        "assets/tiles/level5.tmx",
+        "assets/tiles/pre_level_1.tmx",
         "assets/tiles/pre_level_2.tmx",
         "assets/tiles/level4.tmx",
-        "assets/tiles/level3.tmx",
+        "assets/tiles/level2.tmx",
+        "assets/tiles/pre_level_4.tmx",
+        "assets/tiles/pre_level_5.tmx",
         "assets/tiles/rocket_level.tmx"
     ],
     "tileset.embedInMap": false,
