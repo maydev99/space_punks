@@ -43,6 +43,7 @@ class Player extends SpriteAnimationGroupComponent
 
   static final Vector2 _down = Vector2(0, 1);
 
+
   static final _animationMap = {
     PlayerState.run: SpriteAnimationData.sequenced(
         amount: 4, stepTime: 0.1, textureSize: Vector2(64, 64)),
@@ -187,6 +188,8 @@ class Player extends SpriteAnimationGroupComponent
 
         position += collisionNormal.scaled(separationDistance);
       }
+
+
     }
 
     if (other is MovingPlatform) {

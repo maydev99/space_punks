@@ -21,14 +21,24 @@ class AudioManager {
   Future<void> init(List<String> files) async {
     FlameAudio.bgm.initialize();
     await FlameAudio.audioCache.loadAll(files);
-    popSound = await FlameAudio.createPool('sfx/pop.mp3', maxPlayers: 6);
+   // await FlameAudio.audioCache.loadAll(['sfx/pop.mp3', 'sfx/squish2.mp3', 'sfx/teleport3.mp3', 'sfx/ding.mp3', 'sfx/bonus.mp3', 'sfx/oh.mp3', 'sfx/unlock.mp3', 'sfx/locked.mp3']);
+   /* popSound = await FlameAudio.createPool('sfx/pop.mp3', maxPlayers: 6);
     squishSound = await FlameAudio.createPool('sfx/squish2.mp3', maxPlayers: 2);
     teleportSound = await FlameAudio.createPool('sfx/teleport3.mp3', maxPlayers: 2);
     dingSound = await FlameAudio.createPool('sfx/ding.mp3', maxPlayers: 2);
     bonusSound = await FlameAudio.createPool('sfx/bonus.mp3', maxPlayers: 1);
     ohSound = await FlameAudio.createPool('sfx/oh.mp3', maxPlayers: 3);
     unlockSound = await FlameAudio.createPool('sfx/unlock.mp3', maxPlayers: 1);
-    lockedSound = await FlameAudio.createPool('sfx/locked.mp3', maxPlayers: 1);
+    lockedSound = await FlameAudio.createPool('sfx/locked.mp3', maxPlayers: 1);*/
+    //popSound = await FlameAudio.audioCache
+    popSound = await AudioPool.create('pop.mp3', maxPlayers: 6);
+    squishSound = await AudioPool.create('squish2.mp3', maxPlayers: 2);
+    teleportSound = await AudioPool.create('teleport3.mp3', maxPlayers: 2);
+    dingSound = await AudioPool.create('ding.mp3', maxPlayers: 2);
+    bonusSound = await AudioPool.create('bonus.mp3', maxPlayers: 2);
+    ohSound = await AudioPool.create('oh.mp3', maxPlayers: 2);
+    unlockSound = await AudioPool.create('unlock.mp3', maxPlayers: 1);
+    lockedSound = await AudioPool.create('locked.mp3', maxPlayers: 1);
   }
 
   void playPopSound() {

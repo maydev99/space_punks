@@ -14,7 +14,7 @@ dependencies:
   # import 'package:logger/logger.dart';
   flame: any
   flame_tiled: 1.6.0
-  flame_audio: 1.3.0
+  flame_audio: 1.0.2
   tiled: any
   google_fonts: any
   get_storage: any

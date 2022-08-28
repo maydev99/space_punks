@@ -23,10 +23,8 @@ class GameScreenState extends State<GameScreen> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      onWillPop: () async {
-        return false;
-      },
-      child: MaterialApp(
+      onWillPop: () async => false,
+        child: MaterialApp(
           title: 'AppTitle',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(primarySwatch: Colors.blue),
